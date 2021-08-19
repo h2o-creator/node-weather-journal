@@ -6,7 +6,8 @@
  *     -   1.0.0
  * 
  *     REPOSITORY:
- *     -   https://github.com/h2o-creator/node-weather-journal
+ *     -   https://github.com/h2o-creator/node-weather-journal (Note: Stylesheet is made similar to my landing page project:
+ *                                                                  https://github.com/h2o-creator/udacity-landing-page)
  * 
  *     LICENSE NOTICE:
  *     -   This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; 
@@ -17,3 +18,94 @@
  * 
  *     -   You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
  */
+
+/* Layout & Body Style */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #fff;
+    background: rgb(250,158,169);
+    background: linear-gradient(58deg, rgba(250,158,169,1) 0%, rgba(124,240,255,1) 50%, rgba(0,161,233,1) 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Roboto, 'Open Sans', Helvetica;
+    font-size: medium;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    word-spacing: 1em;
+}
+
+/* This is the container where our content (typically, sections) will be added to
+ * I added that because background would make the text appear unclear, and I liked to use a background image,
+ * not to mention that we need this for another reason: Making text look consistent, setting margins, etc.
+ */
+
+ .container {
+    margin: 0 50px; /* Need to do that to look nice with the nav and footer classes */
+    padding: 25px;
+    min-height: 650px;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid white;
+    border-top: 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Footer */
+
+.footer { /* Designed similar to nav to look better */
+    margin: 50px;
+    margin-top: 0; /* Just to ensure that there's no gap between this footer class and our container class */
+    background-color: #000;
+    text-align: center;
+    padding: 24px;
+}
+
+/* Section */
+
+.section {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    padding: 100px;
+    transition: ease-out 1s;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.section + .section {
+    margin-top: 10px;
+}
+
+/* Mobile responsiveness */
+
+@media only screen and (max-width: 800px) {
+    .container {
+        margin: 0 !important;
+        margin-top: 5px !important;
+        padding: 0;
+        width: 100%;
+        border: none;
+    }
+
+    .section {
+        padding: 5px;
+    }
+
+    .footer {
+        width: 100%;
+        margin: 0;
+        padding-left: 35px;
+        text-align: left;
+    }
+}
