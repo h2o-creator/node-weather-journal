@@ -40,11 +40,34 @@
     <body>
         <!-- Start of container -->
         <div class="container">
+            <div class="decoration">
+                <img src="img/sun-icon.png" width="100px" height="100px">
+                <img src="img/cloud-icon.png" width="200px" height="120px">
+                <h1>Weather Journal App</h1>
+            </div>    
             <!-- Start of section 1 -->
-            <section class="section">
-                Welcome to the Weather Journal Application!
+            <section id="section-input" class="section">
+                <img src="img/cloud-icon.png" width="200px" height="120px">
+                <h2>Your Options</h2>
+                <label for="zip">Please enter your ZIP code below to show weather details for</label>
+                <input type="text" id="zip" placeholder="Enter ZIP code here">
+                <label for="feelings">Here you can express your feelings for today's weather!</label>
+                <textarea type="text" id="feelings" placeholder="How do you feel today?" rows="3" cols="50"></textarea>
+                <button id="generate">View Results</button>
             </section>
             <!-- End of section 1 -->
+            <!-- Start of section 2 -->
+            <section id="section-output" class="section">
+                <img src="img/cloud-icon.png" width="200px" height="120px">
+                <h2>Result</h2>
+                <!-- Output data dynamically updated by JavaScript -->
+                <div id="entryHolder">
+                    <div id="date"></div>
+                    <div id="temp"></div>
+                    <div id="content"></div>
+                </div>
+            </section>
+            <!-- End of section 2 -->
         </div>
         <!-- End of container -->
         <!-- Start of footer -->
