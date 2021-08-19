@@ -46,3 +46,12 @@ Notice: API credentials included in this repository may not be used in productio
  *     -   You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
  */
 ```
+
+# Image Copyright
+
+- img/sun-icon.png
+    - Source: https://snipstock.com/image/transparent-images-snipstock-com-sun-png-transparent-image-2-png-59686
+    - Purpose: Decoration
+- img/cloud-icon.png
+    - Source: https://mendijonas.blogspot.com/2020/11/cartoon-clouds-clipart-transparent.html
+    - Purpose: Decoration
