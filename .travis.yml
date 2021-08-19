@@ -1,3 +1,7 @@
 language: node_js
 node_js:
-  - node
+  - "stable"
+before_script:
+  - npm install -g express body-parser cors
+script:
+  - npm run start
