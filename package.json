@@ -1,0 +1,20 @@
+{
+    "name": "node-weather-journal",
+    "description": "A weather journal application created with Node and Express.",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/h2o-creator/node-weather-journal.git"
+    },
+    "keywords": ["weather", "journal", "app", "express"],
+    "author": "Abdelhady Salah",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/h2o-creator/node-weather-journal/issues"
+    },
+    "dependencies": {
+        "express": "latest",
+        "body-parser": "latest",
+        "cors": "latest"
+    }
+}
