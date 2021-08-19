@@ -17,3 +17,37 @@
  * 
  *     -   You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
  */
+
+//Dependencies
+//Include all the required modules for the application
+const express = require('express'); //Express Web App API
+const bodyParser = require('body-parser'); //Middleware to handle POST requests and parse the request body coming from the client
+const cors = require('cors'); //Cross-origin resource sharing (something for the HTTP headers)
+
+//API endpoint object
+const weatherAppData = {};
+
+//Server options
+const serverOptions = {
+    hostname: 'localhost',
+    port: 7128
+};
+
+//Initialize
+const app = express(); //Create an application instance using express
+
+//Use the dependencies (middleware & cors)
+app.use(bodyParser.urlencoded({ extended: false })); //Parse application/x-www-form-urlencoded
+app.use(bodyParser.json()); //Parse application/json
+app.use(cors());
+
+//Include browser files (the actual content)
+app.use(express.static('public_html'));
+
+//Start the server
+const server = app.listen(serverOptions.port, serverOptions.hostname, () => {
+    console.log('\n***************************************************');
+    console.log(`Running Web Journal App using Node & Express:`);
+    console.log(serverOptions);
+    console.log('***************************************************\n');
+});
