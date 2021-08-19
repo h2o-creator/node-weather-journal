@@ -16,5 +16,9 @@
         "express": "latest",
         "body-parser": "latest",
         "cors": "latest"
+    },
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
     }
 }
