@@ -32,6 +32,19 @@ Notice: API credentials included in this repository may not be used in productio
 - Responsive layout and a nice CSS stylesheet
 - To be added
 
+## Installation
+1. Clone the repo to a local dir
+2. Install the package and its dependencies:
+```sh
+npm-install #in the project dir
+```
+3. Run the script(s):
+```sh
+npm run start #run server.js
+npm run test #run tests with Mocha and Chai
+```
+You can also use `node server.js` in the package dir to start the Express web server.
+
 ## Known Bugs
 - To be added
 
