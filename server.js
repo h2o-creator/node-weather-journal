@@ -25,12 +25,13 @@ const bodyParser = require('body-parser'); //Middleware to handle POST requests 
 const cors = require('cors'); //Cross-origin resource sharing (something for the HTTP headers)
 
 //API endpoint object
-const weatherAppData = {};
+const projectData = {};
 
 //Server options
 const serverOptions = {
     hostname: 'localhost',
-    port: 7128
+    port: 7128,
+    weatherAppAPI: '652e8cccc30ae115bc6272635d1ad7ca'
 };
 
 //Initialize
@@ -50,4 +51,9 @@ const server = app.listen(serverOptions.port, serverOptions.hostname, () => {
     console.log(`Running Web Journal App using Node & Express:`);
     console.log(serverOptions);
     console.log('***************************************************\n');
+});
+
+//Return Data Endpoint
+app.get('/fetch-project-data', (req, res) => {
+    res.send(projectData);
 });
