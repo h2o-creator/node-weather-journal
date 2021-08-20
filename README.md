@@ -1,4 +1,6 @@
 # node-weather-journal
+![Build Results](https://app.travis-ci.com/h2o-creator/node-weather-journal.svg?branch=main "Build Results")
+
 A weather journal application project for Udacity
 
 Notice: API credentials included in this repository may not be used in production.
@@ -11,14 +13,23 @@ Notice: API credentials included in this repository may not be used in productio
         - app.js (client-side javascript code)
     - index.html (landing page for visitors, includes all client-side code and the stylesheet)
 - .gitignore (uses the Node gitignore default template from GitHub)
+- .travis.yml (Config file for Travis CI - auto build and run tests)
 - LICENSE (GNU GPL v3)
+- package.json (Details for the NPM package)
 - README.md (this file, includes some details about the project)
 - server.js (server-side javascript code, uses the Node runtime)
 
 ## Dependencies
 - Node JavaScript runtime environment
+- Express Web API Module (to run the app)
+- Body Parser Middleware (for POST)
+- CORS Module (for headers)
+- Mocha (test framework)
+- Chai (for it's expect function, used in combination with Mocha)
 
 ## Features
+- A functional web application that listens on IP:Port
+- Responsive layout and a nice CSS stylesheet
 - To be added
 
 ## Known Bugs
