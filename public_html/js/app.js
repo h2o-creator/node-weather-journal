@@ -17,3 +17,20 @@
  * 
  *     -   You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
  */
+
+//Fetch data from application endpoint (/fetch-project-data)
+const fetchProjectData = async (url = '') => {
+    const response = await fetch(url, {
+        method: 'GET',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    try {
+        const projectData = response.json();
+        return projectData;
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+}
