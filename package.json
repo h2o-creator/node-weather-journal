@@ -6,19 +6,27 @@
         "type": "git",
         "url": "https://github.com/h2o-creator/node-weather-journal.git"
     },
-    "keywords": ["weather", "journal", "app", "express"],
+    "keywords": [
+        "weather",
+        "journal",
+        "app",
+        "express"
+    ],
     "author": "Abdelhady Salah",
     "license": "GPL-3.0-or-later",
     "bugs": {
         "url": "https://github.com/h2o-creator/node-weather-journal/issues"
     },
     "dependencies": {
-        "express": "latest",
         "body-parser": "latest",
-        "cors": "latest"
+        "chai": "^4.3.4",
+        "cors": "latest",
+        "express": "latest",
+        "mocha": "^9.1.0"
     },
     "main": "server.js",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "test": "mocha --recursive --exit"
     }
 }
