@@ -1,5 +1,5 @@
 {
-    "name": "node-weather-journal",
+    "name": "@h2o-creator/node-weather-journal",
     "description": "A weather journal application created with Node and Express.",
     "version": "1.0.0",
     "repository": {
