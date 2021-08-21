@@ -18,10 +18,10 @@
         "url": "https://github.com/h2o-creator/node-weather-journal/issues"
     },
     "dependencies": {
-        "body-parser": "latest",
+        "body-parser": "^1.19.0",
         "chai": "^4.3.4",
-        "cors": "latest",
-        "express": "latest",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
         "mocha": "^9.1.0"
     },
     "main": "server.js",
@@ -30,6 +30,6 @@
         "test": "mocha --recursive --exit"
     },
     "publishConfig": {
-        "registry":"https://npm.pkg.github.com"
+        "registry": "https://npm.pkg.github.com"
     }
 }
