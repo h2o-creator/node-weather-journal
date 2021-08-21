@@ -49,8 +49,11 @@
             <section id="section-input" class="section">
                 <img src="img/cloud-icon.png" width="200px" height="120px">
                 <h2>Your Options</h2>
+                <label for="country-code">Please enter your country code below</label>
+                <p>You can find your country code here (use the 2-letters ISO code): <a href="https://countrycode.org/">https://countrycode.org/</a></p>
+                <input type="text" id="country-code" placeholder="Enter country code here">
                 <label for="zip">Please enter your ZIP code below to show weather details for</label>
-                <input type="text" id="zip" placeholder="Enter ZIP code here">
+                <input type="number" id="zip" placeholder="Enter ZIP code here">
                 <label for="feelings">Here you can express your feelings for today's weather!</label>
                 <textarea type="text" id="feelings" placeholder="How do you feel today?" rows="3" cols="50"></textarea>
                 <button id="generate">View Results</button>
@@ -62,6 +65,8 @@
                 <h2>Result</h2>
                 <!-- Output data dynamically updated by JavaScript -->
                 <div id="entryHolder">
+                    <div id="country"></div>
+                    <div id="city"></div>
                     <div id="date"></div>
                     <div id="temp"></div>
                     <div id="content"></div>
