@@ -70,25 +70,25 @@ const updateUI = () => {
     fetchProjectData('/fetch-project-data')
     .then ((newData) => {
         //Update country code
-        const countryCodeElement = document.querySelector('#country');
-        countryCodeElement.textContent = `Country Code: ${newData.countryCode.toUpperCase()}`;
+        const countryCodeElement = document.getElementById('country');
+        countryCodeElement.innerHTML = `Country Code: ${newData.countryCode.toUpperCase()}`;
         //Update city
-        const cityElement = document.querySelector('#city');
-        cityElement.textContent = `City: ${newData.city}`;
+        const cityElement = document.getElementById('city');
+        cityElement.innerHTML = `City: ${newData.city}`;
         //Update date
-        const dateElement = document.querySelector('#date');
-        dateElement.textContent = `Today's date: ${newData.date}`;
+        const dateElement = document.getElementById('date');
+        dateElement.innerHTML = `Today's date: ${newData.date}`;
         //Update temp
-        const tempElement = document.querySelector('#temp');
-        tempElement.textContent = `Temp: ${newData.temp} ℃`;
+        const tempElement = document.getElementById('temp');
+        tempElement.innerHTML = `Temp: ${newData.temp} ℃`;
         //Update feelings (according to the rubric, wasn't necessary though)
-        const contentElement = document.querySelector('#content');
-        contentElement.textContent = `Your feelings: ${newData.content}`;
+        const contentElement = document.getElementById('content');
+        contentElement.innerHTML = `Your feelings: ${newData.content}`;
         //Unhide our output section
-        const outputElement = document.querySelector('#section-output');
+        const outputElement = document.getElementById('section-output');
         outputElement.style.display = 'block';
         //Scroll down a bit to the output entry holder...
-        const entryHolder = document.querySelector('#entryHolder');
+        const entryHolder = document.getElementById('entryHolder');
         const outputOffset = entryHolder.offsetTop;
         window.scrollTo(0, outputOffset);
     });
