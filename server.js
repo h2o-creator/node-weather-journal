@@ -18,6 +18,13 @@
  *     -   You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
  */
 
+//PROBLEMS
+//I read the Udacity rubric, so I followed the specifications but there's more to do I think.
+//1. Secure user input against possible code-breaking methods
+//2. Ensure that the user is not abusing the API (can we hide the API behind the server, instead of passing it to the client?)
+//3. Allow our project endpoint to work for multiple-users. I mean, isn't it one object for ALL or is it per client? I assume it's global
+//      And that would conflict with many requests I think?
+
 //Dependencies
 //Include all the required modules for the application
 const express = require('express'); //Express Web App API
@@ -25,13 +32,12 @@ const bodyParser = require('body-parser'); //Middleware to handle POST requests 
 const cors = require('cors'); //Cross-origin resource sharing (something for the HTTP headers)
 
 //API endpoint object
-const projectData = {};
+let projectData = {};
 
 //Server options
 const serverOptions = {
     hostname: 'localhost',
-    port: 7128,
-    weatherAppAPI: '652e8cccc30ae115bc6272635d1ad7ca'
+    port: 7128
 };
 
 //Initialize
@@ -47,6 +53,7 @@ app.use(express.static('public_html'));
 
 //Start the server
 const server = app.listen(serverOptions.port, serverOptions.hostname, () => {
+    //Running the server on the options added above at Server Options
     console.log('\n***************************************************');
     console.log(`Running Web Journal App using Node & Express:`);
     console.log(serverOptions);
@@ -54,6 +61,20 @@ const server = app.listen(serverOptions.port, serverOptions.hostname, () => {
 });
 
 //Return Data Endpoint
-app.get('/fetch-project-data', (req, res) => {
+app.get('/fetch-project-data', (_req, res) => {
+    //Respond with the object endpoint
+    res.send(projectData);
+});
+
+//Push Data to Endpoint
+app.post('/push-project-data', (req, res) => {
+    //Suggest a better way we can do this... I think there should be a way to guess the object key... dynamically.
+    //Here we're basically updating the project endpoint with whatever request came from the client.
+    projectData.date = req.body.date !== undefined ? req.body.date : projectData.date;
+    projectData.temp = req.body.temp !== undefined ? req.body.temp : projectData.temp;
+    projectData.content = req.body.content !== undefined ? req.body.content : projectData.content;
+    projectData.countryCode = req.body.countryCode !== undefined ? req.body.countryCode : projectData.countryCode;
+    projectData.city = req.body.city !== undefined ? req.body.city : projectData.city;
+    //Respond with the new project data object
     res.send(projectData);
 });
