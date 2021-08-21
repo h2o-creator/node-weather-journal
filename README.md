@@ -30,7 +30,10 @@ Notice: API credentials included in this repository may not be used in productio
 ## Features
 - A functional web application that listens on IP:Port
 - Responsive layout and a nice CSS stylesheet
-- To be added
+- Get weather data for any city by ZIP code & country 2-letters code
+- Dynamically update UI with fetched data
+- Uses the OpenWeatherMap API to get weather data
+- Code is explained in comments (best feature!)
 
 ## Installation
 1. Clone the repo to a local dir
